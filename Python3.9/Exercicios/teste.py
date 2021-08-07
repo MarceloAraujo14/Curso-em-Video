@@ -1,0 +1,3 @@
+str
+bool
+int
