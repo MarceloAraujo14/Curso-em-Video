@@ -10,4 +10,24 @@ quantos num foram digitados, valores ordenados decrescente, se 5 foi digitado.
  """
 lista = []
 while True:
-    lista.append(int(input()))
+    lista.append(int(input('Digite um valor: ')))
+    esc = ' '
+    while True:
+        esc = str(input('Deseja continuar?[S/N]')).upper().strip()[0]
+        if esc in 'SN':
+            break
+        else:
+            continue
+    if esc == 'S':
+        continue
+    else:
+        break
+print(lista)
+print(f'Foram registrados {len(lista)} valores nessa lista.')
+lista.sort(reverse=True)
+print(f'A lista em forma decrescente é:{lista}.')
+
+if 5 in lista:
+    print('O valor 5 faz parte da lista.')
+else:
+    print('O valor 5 não foi encontrado na lista.')
